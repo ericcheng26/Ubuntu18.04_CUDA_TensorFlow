@@ -42,7 +42,9 @@ bash Anaconda3-2020.07-Linux-x86_64.sh
 ### cuda 11.0在turing顯卡下apt安裝
 1.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)  
 2.進行Runfile Installation [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
-`lsmod | grep nouveau #確保沒有任何文字被輸出（詳細請見參考源）`
+```
+lsmod | grep nouveau #確保沒有任何文字被輸出（詳細請見參考源）
+```
 >這邊不繼續下去～因為比較喜歡用套件管理軟體安裝  
 
 3.進行package Manager Installation [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
@@ -98,9 +100,9 @@ sudo apt-get --purge remove "*cublas*" "*cufft*" "*curand*" \
 sudo apt-get --purge remove "*nvidia*"
 ```
 ### cudnn 8.0.2在cuda 11.0下(.deb)安裝
-0.下載cuDNN v8.0.2 (July 24th, 2020)forCUDA 11.0 [註冊後下載](https://developer.nvidia.com/rdp/cudnn-download)
-|cuDNN Runtime Library for Ubuntu18.04 x86_64 (Deb)
-|cuDNN Developer Library for Ubuntu18.04 x86_64 (Deb)
+0.下載cuDNN v8.0.2 (July 24th, 2020)forCUDA 11.0 [註冊後下載](https://developer.nvidia.com/rdp/cudnn-download)  
+|cuDNN Runtime Library for Ubuntu18.04 x86_64 (Deb)  
+|cuDNN Developer Library for Ubuntu18.04 x86_64 (Deb)  
 |cuDNN Code Samples and User Guide for Ubuntu18.04 x86_64 (Deb)  
 
 1.安裝cudnn庫
@@ -120,7 +122,7 @@ make clean && make #會出現很多warning沒差拉！
 ./mnistCUDNN # "Test passed!" 出現表示成功
 ```
 ### TensorRT 7.1.3.4在cuda 11.0下(.deb)安裝
-0.下載TensorRT 7.1 GA [註冊後下載](https://developer.nvidia.com/nvidia-tensorrt-7x-download)
+0.下載TensorRT 7.1 GA [註冊後下載](https://developer.nvidia.com/nvidia-tensorrt-7x-download)  
 |TensorRT 7.1.3.4 for Ubuntu 1804 and CUDA 11.0 DEB local repo packages
 
 1.確認RT支援的推理精度和特殊硬體的支援功能[參考源](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-713/support-matrix/index.html)  
@@ -130,14 +132,16 @@ make clean && make #會出現很多warning沒差拉！
 ```
 nvcc --version #確認nvcc能被bash找到
 ```
-顯示以下資訊表示成功
+顯示以下資訊表示成功  
+
 :::info
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2020 NVIDIA Corporation
 Built on Thu_Jun_11_22:26:38_PDT_2020
 Cuda compilation tools, release 11.0, V11.0.194
 Build cuda_11.0_bu.TC445_37.28540450_0
-:::
+:::  
+
 ```
 pip3 install 'pycuda>=2019.1.1'
 ```
@@ -159,7 +163,8 @@ sudo apt-get install uff-converter-tf
 ```
 dpkg -l | grep TensorRT
 ```
-顯示以下資訊表示成功
+顯示以下資訊表示成功  
+
 :::info
 ii  graphsurgeon-tf                                             7.1.3-1+cuda11.0                                 amd64        GraphSurgeon for TensorRT package
 ii  libnvinfer-bin                                              7.1.3-1+cuda11.0                                 amd64        TensorRT binaries
@@ -177,7 +182,8 @@ ii  python3-libnvinfer                                          7.1.3-1+cuda11.0
 ii  python3-libnvinfer-dev                                      7.1.3-1+cuda11.0                                 amd64        Python 3 development package for TensorRT
 ii  tensorrt                                                    7.1.3.4-1+cuda11.0                               amd64        Meta package of TensorRT
 ii  uff-converter-tf                                            7.1.3-1+cuda11.0                                 amd64        UFF converter for TensorRT package
-:::
+:::  
+
 5.如果你要當App Server用來推理
 ```
 sudo apt-get update
