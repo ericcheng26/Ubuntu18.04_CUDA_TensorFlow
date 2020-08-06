@@ -1,8 +1,6 @@
 > 安裝ubuntu 18.04要記得選取"安裝第三方驅動"
 
 # Ubuntu18.04、python3、TensorFlow安裝教學
-
----
 ### 440顯卡驅動(灌完cuda 11.0 後會自動改成450驅動)
 1.重灌完後，在grub界面按e進入修改參數，quite splash 後面空一格後加入nomodeset後進入系統  
 2.利用ubuntu自帶的"軟體與更新"，選擇欲用的"顯卡驅動"  
@@ -208,4 +206,3 @@ deactivate  # don't exit until you're done using TensorFlow
 ```
 ## 我們成功裝好cuda；cudnn；TensorRT;TensorFlow囉！
 
----
