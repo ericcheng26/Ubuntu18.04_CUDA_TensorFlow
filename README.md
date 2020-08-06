@@ -40,10 +40,10 @@ bash Anaconda3-2020.07-Linux-x86_64.sh
 ```
 
 ### cuda 11.0在turing顯卡下apt安裝
-1.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
+1.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)  
 2.進行Runfile Installation [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
 `lsmod | grep nouveau #確保沒有任何文字被輸出（詳細請見參考源）`
->這邊不繼續下去～因為比較喜歡用套件管理軟體安裝
+>這邊不繼續下去～因為比較喜歡用套件管理軟體安裝  
 
 3.進行package Manager Installation [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
 ```
@@ -74,13 +74,15 @@ cat /proc/driver/nvidia/version #出現kernel version表成功
 ```
 nvidia-smi #順便看CUDA Version是不是你裝好的！
 ```
-應該會顯示error，因為cuda11自動裝了相容的顯卡驅動450，須重新開機讓系統應用。
+應該會顯示error，因為cuda11自動裝了相容的顯卡驅動450，須重新開機讓系統應用。  
+
 5.2 重開機再確認一次版本號
 ```
 reboot
 nvidia-smi #看看NVIDIA-SMI和Driver Version是否一致
 ```
-應該一致了，如果不一致，那肯定沒做好之前的步驟。
+應該一致了，如果不一致，那肯定沒做好之前的步驟。  
+
 6.（選擇性安裝套件 #我有裝，但好像沒必要）
 ```
 sudo apt-get install g++ freeglut3-dev build-essential libx11-dev \
@@ -99,7 +101,7 @@ sudo apt-get --purge remove "*nvidia*"
 0.下載cuDNN v8.0.2 (July 24th, 2020)forCUDA 11.0 [註冊後下載](https://developer.nvidia.com/rdp/cudnn-download)
 |cuDNN Runtime Library for Ubuntu18.04 x86_64 (Deb)
 |cuDNN Developer Library for Ubuntu18.04 x86_64 (Deb)
-|cuDNN Code Samples and User Guide for Ubuntu18.04 x86_64 (Deb)
+|cuDNN Code Samples and User Guide for Ubuntu18.04 x86_64 (Deb)  
 
 1.安裝cudnn庫
 ```
@@ -121,7 +123,7 @@ make clean && make #會出現很多warning沒差拉！
 0.下載TensorRT 7.1 GA [註冊後下載](https://developer.nvidia.com/nvidia-tensorrt-7x-download)
 |TensorRT 7.1.3.4 for Ubuntu 1804 and CUDA 11.0 DEB local repo packages
 
-1.確認RT支援的推理精度和特殊硬體的支援功能[參考源](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-713/support-matrix/index.html)
+1.確認RT支援的推理精度和特殊硬體的支援功能[參考源](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-713/support-matrix/index.html)  
 
 2.先安裝PyCUDA[參考源](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-713/install-guide/index.html#installing-pycuda)
 
