@@ -134,7 +134,7 @@ nvcc --version #確認nvcc能被bash找到
 ```
 顯示以下資訊表示成功  
 
-:::info
+:::info  
 nvcc: NVIDIA (R) Cuda compiler driver  
 Copyright (c) 2005-2020 NVIDIA Corporation  
 Built on Thu_Jun_11_22:26:38_PDT_2020  
@@ -165,7 +165,7 @@ dpkg -l | grep TensorRT
 ```
 顯示以下資訊表示成功  
 
-:::info
+:::info  
 ii  graphsurgeon-tf                                             7.1.3-1+cuda11.0                                 amd64        GraphSurgeon for TensorRT package  
 ii  libnvinfer-bin                                              7.1.3-1+cuda11.0                                 amd64        TensorRT binaries  
 ii  libnvinfer-dev                                              7.1.3-1+cuda11.0                                 amd64        TensorRT development libraries and headers  
