@@ -135,11 +135,11 @@ nvcc --version #確認nvcc能被bash找到
 顯示以下資訊表示成功  
 
 :::info
-nvcc: NVIDIA (R) Cuda compiler driver
-Copyright (c) 2005-2020 NVIDIA Corporation
-Built on Thu_Jun_11_22:26:38_PDT_2020
-Cuda compilation tools, release 11.0, V11.0.194
-Build cuda_11.0_bu.TC445_37.28540450_0
+nvcc: NVIDIA (R) Cuda compiler driver  
+Copyright (c) 2005-2020 NVIDIA Corporation  
+Built on Thu_Jun_11_22:26:38_PDT_2020  
+Cuda compilation tools, release 11.0, V11.0.194  
+Build cuda_11.0_bu.TC445_37.28540450_0  
 :::  
 
 ```
@@ -166,22 +166,22 @@ dpkg -l | grep TensorRT
 顯示以下資訊表示成功  
 
 :::info
-ii  graphsurgeon-tf                                             7.1.3-1+cuda11.0                                 amd64        GraphSurgeon for TensorRT package
-ii  libnvinfer-bin                                              7.1.3-1+cuda11.0                                 amd64        TensorRT binaries
-ii  libnvinfer-dev                                              7.1.3-1+cuda11.0                                 amd64        TensorRT development libraries and headers
-ii  libnvinfer-doc                                              7.1.3-1+cuda11.0                                 all          TensorRT documentation
-ii  libnvinfer-plugin-dev                                       7.1.3-1+cuda11.0                                 amd64        TensorRT plugin libraries
-ii  libnvinfer-plugin7                                          7.1.3-1+cuda11.0                                 amd64        TensorRT plugin libraries
-ii  libnvinfer-samples                                          7.1.3-1+cuda11.0                                 all          TensorRT samples
-ii  libnvinfer7                                                 7.1.3-1+cuda11.0                                 amd64        TensorRT runtime libraries
-ii  libnvonnxparsers-dev                                        7.1.3-1+cuda11.0                                 amd64        TensorRT ONNX libraries
-ii  libnvonnxparsers7                                           7.1.3-1+cuda11.0                                 amd64        TensorRT ONNX libraries
-ii  libnvparsers-dev                                            7.1.3-1+cuda11.0                                 amd64        TensorRT parsers libraries
-ii  libnvparsers7                                               7.1.3-1+cuda11.0                                 amd64        TensorRT parsers libraries
-ii  python3-libnvinfer                                          7.1.3-1+cuda11.0                                 amd64        Python 3 bindings for TensorRT
-ii  python3-libnvinfer-dev                                      7.1.3-1+cuda11.0                                 amd64        Python 3 development package for TensorRT
-ii  tensorrt                                                    7.1.3.4-1+cuda11.0                               amd64        Meta package of TensorRT
-ii  uff-converter-tf                                            7.1.3-1+cuda11.0                                 amd64        UFF converter for TensorRT package
+ii  graphsurgeon-tf                                             7.1.3-1+cuda11.0                                 amd64        GraphSurgeon for TensorRT package  
+ii  libnvinfer-bin                                              7.1.3-1+cuda11.0                                 amd64        TensorRT binaries  
+ii  libnvinfer-dev                                              7.1.3-1+cuda11.0                                 amd64        TensorRT development libraries and headers  
+ii  libnvinfer-doc                                              7.1.3-1+cuda11.0                                 all          TensorRT documentation  
+ii  libnvinfer-plugin-dev                                       7.1.3-1+cuda11.0                                 amd64        TensorRT plugin libraries  
+ii  libnvinfer-plugin7                                          7.1.3-1+cuda11.0                                 amd64        TensorRT plugin libraries  
+ii  libnvinfer-samples                                          7.1.3-1+cuda11.0                                 all          TensorRT samples  
+ii  libnvinfer7                                                 7.1.3-1+cuda11.0                                 amd64        TensorRT runtime libraries  
+ii  libnvonnxparsers-dev                                        7.1.3-1+cuda11.0                                 amd64        TensorRT ONNX libraries  
+ii  libnvonnxparsers7                                           7.1.3-1+cuda11.0                                 amd64        TensorRT ONNX libraries  
+ii  libnvparsers-dev                                            7.1.3-1+cuda11.0                                 amd64        TensorRT parsers libraries  
+ii  libnvparsers7                                               7.1.3-1+cuda11.0                                 amd64        TensorRT parsers libraries  
+ii  python3-libnvinfer                                          7.1.3-1+cuda11.0                                 amd64        Python 3 bindings for TensorRT  
+ii  python3-libnvinfer-dev                                      7.1.3-1+cuda11.0                                 amd64        Python 3 development package for TensorRT  
+ii  tensorrt                                                    7.1.3.4-1+cuda11.0                               amd64        Meta package of TensorRT  
+ii  uff-converter-tf                                            7.1.3-1+cuda11.0                                 amd64        UFF converter for TensorRT package  
 :::  
 
 5.如果你要當App Server用來推理
