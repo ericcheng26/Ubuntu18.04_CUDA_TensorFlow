@@ -1,6 +1,6 @@
 > 安裝ubuntu 18.04要記得選取"安裝第三方驅動"
 
-# Ubuntu 18.04_CUDA 11.0_cuDNN 8.0.2_TensorRT 7.1.3_TensorFlow安裝教學
+# Ubuntu 18.04 搭建深度學習開發環境_CUDA 11.0_cuDNN 8.0.2_TensorRT 7.1.3_TensorFlow安裝教學
 ## Step1.　440顯卡驅動(灌完cuda 11.0 後會自動改成450驅動)
 1.重灌完後，在grub界面按e進入修改參數，quite splash 後面空一格後加入nomodeset後進入系統  
 2.利用ubuntu自帶的"軟體與更新"，選擇欲用的"顯卡驅動"  
