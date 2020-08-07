@@ -6,7 +6,7 @@
 2.利用ubuntu自帶的"軟體與更新"，選擇欲用的"顯卡驅動"  
 3.之後也不需要永久修改grub參數了，重啟後仍然會使用"專用顯卡驅動"
 ## 藍芽、聲音控制界面
-1.bluez从5.48更新到5.50
+1.bluez從5.48更新到5.50
 ```
 dpkg --status bluez | grep '^Version:'` #查看bluez版本
 sudo add-apt-repository ppa:bluetooth/bluez #添加套件源
@@ -24,8 +24,8 @@ trust mac 地址
 sudo apt install pavucontrol
 pavucontrol #開啟聲音控制界面（因為gnome內建的再後方面板音源線預設設定有Bug）
 ```
-## 安裝pip3、conda
-1.pip3
+## 安裝pip 3、conda
+1.pip 3
 ```
 sudo apt install python3-pip
 pip3 install setuptools
