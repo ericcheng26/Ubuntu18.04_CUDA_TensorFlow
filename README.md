@@ -1,11 +1,11 @@
 > 安裝ubuntu 18.04要記得選取"安裝第三方驅動"
 
-# Ubuntu 18.04、CUDA、cuDNN、TensorFlow安裝教學
-## 440顯卡驅動(灌完cuda 11.0 後會自動改成450驅動)
+# Ubuntu 18.04_CUDA 11.0_cuDNN 8.0.2_TensorRT 7.1.3_TensorFlow安裝教學
+## Step1.　440顯卡驅動(灌完cuda 11.0 後會自動改成450驅動)
 1.重灌完後，在grub界面按e進入修改參數，quite splash 後面空一格後加入nomodeset後進入系統  
 2.利用ubuntu自帶的"軟體與更新"，選擇欲用的"顯卡驅動"  
 3.之後也不需要永久修改grub參數了，重啟後仍然會使用"專用顯卡驅動"
-## 藍芽、聲音控制界面
+## Step2.　藍芽、聲音控制界面
 1.bluez從5.48更新到5.50
 ```
 dpkg --status bluez | grep '^Version:'` #查看bluez版本
@@ -24,7 +24,7 @@ trust mac 地址
 sudo apt install pavucontrol
 pavucontrol #開啟聲音控制界面（因為gnome內建的再後方面板音源線預設設定有Bug）
 ```
-## 安裝pip 3、conda
+## Step3.　安裝pip 3、conda
 1.pip 3
 ```
 sudo apt install python3-pip
@@ -37,7 +37,7 @@ pip3 install setuptools
 bash Anaconda3-2020.07-Linux-x86_64.sh
 ```
 
-## CUDA 11.0在turing顯卡下apt安裝
+## Step4.　CUDA 11.0在turing顯卡下apt安裝
 1.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)  
 2.進行Runfile Installation [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
 ```
@@ -97,7 +97,7 @@ sudo apt-get --purge remove "*cublas*" "*cufft*" "*curand*" \
 ```
 sudo apt-get --purge remove "*nvidia*"
 ```
-## cuDNN 8.0.2在cuda 11.0下(.deb)安裝
+## Step5.　cuDNN 8.0.2在cuda 11.0下(.deb)安裝
 0.下載cuDNN v8.0.2 (July 24th, 2020)forCUDA 11.0 [註冊後下載](https://developer.nvidia.com/rdp/cudnn-download)  
 |cuDNN Runtime Library for Ubuntu18.04 x86_64 (Deb)  
 |cuDNN Developer Library for Ubuntu18.04 x86_64 (Deb)  
@@ -119,7 +119,7 @@ cd  $HOME/cudnn_samples_v8/mnistCUDNN
 make clean && make #會出現很多warning沒差拉！
 ./mnistCUDNN # "Test passed!" 出現表示成功
 ```
-## TensorRT 7.1.3.4在cuda 11.0下(.deb)安裝
+## Step6.　TensorRT 7.1.3.4在cuda 11.0下(.deb)安裝
 0.下載TensorRT 7.1 GA [註冊後下載](https://developer.nvidia.com/nvidia-tensorrt-7x-download)  
 |TensorRT 7.1.3.4 for Ubuntu 1804 and CUDA 11.0 DEB local repo packages
 
@@ -184,7 +184,7 @@ sudo apt-get update
 sudo apt-get install libnvinfer7 cuda-nvrtc-11-0
 sudo apt-get install python3-libnvinfer
 ```
-## TensorFlow 安裝
+## Step7.　TensorFlow 安裝
 安裝前重啟一次電腦
 [參考源](https://www.tensorflow.org/install/pip)
 ```
@@ -205,7 +205,7 @@ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1
 deactivate  # don't exit until you're done using TensorFlow
 ```
 ## 我們成功裝好CUDA；cuDNN；TensorRT;TensorFlow囉！
-## SSH安裝
+## Step8.　SSH安裝
 1.安裝
 ```
 sudo apt update
