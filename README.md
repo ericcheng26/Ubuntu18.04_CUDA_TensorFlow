@@ -1,6 +1,6 @@
 > 安裝ubuntu 18.04要記得選取"安裝第三方驅動"
 
-# Ubuntu18.04、CUDA、cuDNN、TensorFlow安裝教學
+# Ubuntu 18.04、CUDA、cuDNN、TensorFlow安裝教學
 ## 440顯卡驅動(灌完cuda 11.0 後會自動改成450驅動)
 1.重灌完後，在grub界面按e進入修改參數，quite splash 後面空一格後加入nomodeset後進入系統  
 2.利用ubuntu自帶的"軟體與更新"，選擇欲用的"顯卡驅動"  
@@ -205,4 +205,27 @@ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1
 deactivate  # don't exit until you're done using TensorFlow
 ```
 ## 我們成功裝好CUDA；cuDNN；TensorRT;TensorFlow囉！
-
+## SSH安裝
+1.安裝
+```
+sudo apt update
+sudo apt install openssh-server
+```
+2.驗證
+```
+sudo systemctl status ssh
+```
+顯示包含以下資訊表示成功
+```ShellSession
+Active: active (running)
+```
+按下"q"離開
+3.打開ssh port
+```
+sudo ufw allow ssh
+```
+4.如果想關閉ssh
+```
+sudo systemctl stop ssh
+sudo systemctl disable ssh
+```
