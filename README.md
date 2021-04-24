@@ -38,7 +38,7 @@ bash Anaconda3-2020.07-Linux-x86_64.sh
 ```
 
 ## Step4.　CUDA 11.0在turing顯卡下apt安裝
-1.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
+1.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions) 
 
 2.進行Runfile Installation [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
 ```
@@ -100,6 +100,7 @@ sudo apt-get --purge remove "*nvidia*"
 ```
 ## Step5.　cuDNN 8.0.2在cuda 11.0下(.deb)安裝
 0.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html)
+
 0.下載cuDNN v8.0.2 (July 24th, 2020)forCUDA 11.0 [註冊後下載](https://developer.nvidia.com/rdp/cudnn-download)  
 |cuDNN Runtime Library for Ubuntu18.04 x86_64 (Deb)  
 |cuDNN Developer Library for Ubuntu18.04 x86_64 (Deb)  
