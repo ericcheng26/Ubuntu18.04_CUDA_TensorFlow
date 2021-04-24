@@ -38,7 +38,8 @@ bash Anaconda3-2020.07-Linux-x86_64.sh
 ```
 
 ## Step4.　CUDA 11.0在turing顯卡下apt安裝
-1.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)  
+1.安裝前硬體資訊檢查 [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
+
 2.進行Runfile Installation [[參考源]](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions)
 ```
 lsmod | grep nouveau #確保沒有任何文字被輸出（詳細請見參考源）
